@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int digit = 0, digit2;
+	int digit1 = 0, digit2;
 
 	while (digit1 <= 9)
 	{
@@ -30,7 +30,7 @@ int main(void)
 			}
 			digit2++;
 		}
-		digit1++
+		digit1++;
 	}
 	putchar('\n');
 
