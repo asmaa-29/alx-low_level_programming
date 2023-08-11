@@ -5,16 +5,21 @@
 /**
  * main - Entry point
  *
+ * Description: print all aplhabet letters
+ *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char low;
+	char ch = 'a';
 
-	for (low = 'a'; low <= 'z'; low++)
-		putchar(low);
-		putchar('\n');
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		ch++;
+	}
+	putchar('\n');
 
 	return (0);
 }
