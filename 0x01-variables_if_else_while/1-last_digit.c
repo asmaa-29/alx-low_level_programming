@@ -5,14 +5,13 @@
 /**
  * main - Entry point
  *
- * Description: print the value of n status
  *
  * Return: 0 (success)
 */
 int main(void)
 {
 	int n, digit;
-
+	
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	digit = n % 10;
