@@ -21,10 +21,10 @@ int main(void)
 			digit3 = 0;
 			while (digit3 <= 9)
 			{
-				if (digit1 != digit2 && 
-				    digit1 < digit2 && 
-				    digit2 != digit3 && 
-				    digit2 < digit3)
+				if (digit1 != digit2 &&
+						digit1 < digit2 &&
+						digit2 != digit3 &&
+						digit2 < digit3)
 				{
 					putchar(digit1 + 48);
 					putchar(digit2 + 48);
@@ -42,6 +42,6 @@ int main(void)
 		digit1++;
 	}
 	putchar('\n');
-	
+
 	return (0);
 }
