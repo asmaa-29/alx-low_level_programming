@@ -4,6 +4,8 @@
  * _islower - function to check if
  *       character is lowercase
  *
+ * @c: checks input of function 
+ *
  * Return: return 1 if 'c' id lowecase other wise 0 (Success)
 */
 int _islower(int c)
