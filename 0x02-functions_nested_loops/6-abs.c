@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _abs - function that computes the absolute 
- * 		value of an intger
+ * _abs - function that computes the absolute
+ * value of an intger
  * @n: takes in integr type input for function
  *
  * Return: Always 0 (Success)
