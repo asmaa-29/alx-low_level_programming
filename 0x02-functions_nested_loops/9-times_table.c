@@ -15,13 +15,13 @@ void times_table(void)
 		{
 			_putchar('.');
 			_putchar(' ');
-			
+
 			k = num * mult;
 
 			if (k <= 9)
 				_putchar(' ');
 			else
-				_putchar((k / 10)+ 48);
+				_putchar((k / 10) + 48);
 			_putchar((k / 10) + 48);
 		}
 		_putchar('\n');
