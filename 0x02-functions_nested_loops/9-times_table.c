@@ -2,6 +2,9 @@
 
 /**
  * times_Table - prints the 9 times table
+ * Example Table
+ * 0, 0, 0, ..
+ * 0, 1, 2, ..
 */
 
 void times_table(void)
