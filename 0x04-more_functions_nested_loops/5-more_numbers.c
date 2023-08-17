@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * more_numbers - print 0 - 14 ten time
@@ -12,15 +12,14 @@ void more_numbers(void)
 
 	for (a = 1; a <= 10; a++)
 	{
-		for (b = 0; b < 15; b++)
+		for (b = 0; b < 14; b++)
 		{
 			c = b;
-			if (b > 9)
+			if (b >= 10)
 			{
-				_putchar('1' + 48);
-				c = b % 10;
+				_putchar('1');
+				_putchar(b % 10 + '0');
 			}
-			_putchar(c + 48);
 		}
 		_putchar('\n');
 	}

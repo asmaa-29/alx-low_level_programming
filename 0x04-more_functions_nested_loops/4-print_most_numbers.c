@@ -9,13 +9,13 @@
 
 void print_most_numbers(void)
 {
-	int a;
+	int num;
 
-	for (a = '0'; a <= '9'; a++)
+	for (num = 0; num <= 9; num++)
 	{
-		if (a == '2' || a == '4')
+		if (num == 2 || num == 4)
 			continue;
-			_putchar(a + 48);
+			_putchar(num + 48);
 	}
 	_putchar('\n');
 }
