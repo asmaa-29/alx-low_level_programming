@@ -8,15 +8,14 @@
  * Return: pointer to 'dest'
  */
 
-char *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int i = -1;
 
-	for (i = 0; src[i] != '\0'; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = '\0';
+	do {
+		i++;
+		des[i] = sec[i];
+	} while (src[i] != '\0')
 
 	return (dest);
 }
