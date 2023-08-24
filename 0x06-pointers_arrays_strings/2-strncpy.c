@@ -2,9 +2,9 @@
 /**
  * _strncpy - C function that copies a string
  *
- * @dest: buffer storing the string copy
- * @src:the source string
- * @n:max number of byte copied
+ * @dest: pointer to destinstion input buffer
+ * @src: pointer to source input buffer
+ * @n: type of @src
  *
  * Return: returns
 */
@@ -15,12 +15,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
 		dest[i] = src[i];
-
-	while (i < n)
-	{
+	for (; i < n; i++)
 		dest[i] = '\0';
-		i++;
-	}
-
 	return (dest);
 }
