@@ -32,9 +32,9 @@ char *rot13(char *str)
 	{
 		for (indx2 = 0; indx2 < 52; indx2++)
 		{
-			if (str[indx1] == ROT13indx2])
+			if (str[indx1] == ROT13[indx2])
 			{
-				str[indx1] = rot13key[indx2];
+				str[indx1] = rot13[indx2];
 				break;
 			}
 		}
