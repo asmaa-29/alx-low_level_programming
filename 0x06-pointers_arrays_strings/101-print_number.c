@@ -3,9 +3,9 @@
 /**
  * print_number - Printsnumber chars
  *
- * @n: integer paramers
+ * @n1: integer paramers
  */
-void print_number(int n)
+void print_number(int n1)
 {
 	unsigned int num = n1;
 
