@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * wildcmp - compares two strings and returns 1 if the strings
- * can be considered identical, otherwise return 0.
+ * substring_match - check if a substring after wildcard matches s1
+ * can be considered identical, otherwise return 0
  * @s1: string to compare to
  * @s2: string with wild character
  * @after_wldcd: placeholder for position right after wildcard
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately
  */
 int substring_match(char *s1, char *s2, char *after_wldcd)
 {
