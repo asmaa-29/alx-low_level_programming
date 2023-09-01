@@ -8,7 +8,7 @@
 * @argv: list
 * Return: 0 on success
 */
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
 	printf("%s\n", argv[0]);
 	(void)argc;
