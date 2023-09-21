@@ -1,49 +1,85 @@
+#include <stdio.h>
 #include "lists.h"
+#include <stddef.h>
+#include <stdlib.h>
 
 /**
- * add_node - adds a new node at the beginning of a list
- *@head: pointer to the head of the list
- *@str: string to be added
+ * _strlen - function to get length of a string
+ * @s: string
  *
- * Return: returns the address to the new element or NULL
- * if failed
-*/
+ * Return: Length of a array of characters
+ */
+int _strlen(char *s)
+{
+	int i;
 
-/*
-1. Allocate memory for a new node.
-2. If the allocation fails, return NULL.
-3. Copy the string into a new buffer.
-4. If the string copy fails, free the new node and return NULL.
-5. Compute the length of the string.
-6. Set the new node’s next pointer to point to the current head of the list.
-7. Set the head of the list to point to the new node.
-8. Return a pointer to the new node.
-*/
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+/**
+ * _strdup - returns a pointer to a newly allocated space in memory, which
+ * contains a copy of the string given as a parameter.
+ * @str: string to copy
+ *
+ * Return: Pointer
+ */
+char *_strdup(const char *str)
+{
+	int l = 0, i;
+	char *s;
+
+	if (str == NULL)
+		return (0);
+
+	while (*(str + l))
+		l++;
+
+	s = malloc(sizeof(char) * l + 1);
+
+	if (s == 0)
+		return (0);
+
+	for (i = 0; i <= l; i++)
+		*(s + i) = *(str + i);
+	return (s);
+}
+/**
+ * add_node - adds a new node at the beginning of a singly linked list
+ * @head: pointer to head of singly linked list
+ * @str: string to add as new node in list
+ *
+ * Return: the address of the new element, or NULL if it failed
+ */
 list_t *add_node(list_t **head, const char *str)
 {
-	char *dup;
-	int len;
-	list_t *new;
+	char *tmp;
+	list_t *new_node = malloc(sizeof(list_t));
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
+	if (new_node == 0)
+		return (0);
 
-	dup = strdup(str);
-	if (dup == NULL)
+	if (str == 0)
 	{
-		free(new);
-		return (NULL);
+		new_node->str = 0;
+		new_node->len = 0;
 	}
-	for (len = 0; str[len];)
-		len++;
+	else
+	{
+		tmp = _strdup(str);
+		if (tmp == 0)
+		{
+			free(new_node);
+			return (0);
+		}
+		new_node->str = tmp;
+		new_node->len = _strlen(tmp);
+	}
 
-	new->str = dup;
-	new->len = len;
-	new->next = *head;
-
-	*head = new;
-
-	return (new);
-
+	new_node->next = *head;
+	*head = new_node;
+	return (new_node);
 }
